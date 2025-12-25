@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/pictures/backGround/Normal_Background.png);
+  background-size: cover;
+  background-position: center;
+  font-family: "Segoe UI", sans-serif;
+  color: #f5deb3;
+  line-height: 1.6;
+}
+
+
+.header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.header h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+.header h5 {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+.img {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.img img {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+
+ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #fff; 
+}
+
+
+.botinfo {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.botinfo-head {
+  background: #193b69; 
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.botinfo-head h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.botinfo-info {
+  padding: 24px;
+  color: #333;
+  line-height: 1.7;
+}
+
+
+.botinfo-info ul {
+  margin-top: 15px;
+  padding-left: 25px;
+  color: #222;
+}
+
+.botinfo-info li {
+  margin-bottom: 12px;
+  color: #222;
+}
+
+
+.botinfo-info p {
+  margin-bottom: 18px;
+}
+.Reg-Btn{
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+#Reg-Btn{
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #ff8c00;
+    cursor: pointer;
+    color: wheat;
+    transition: transform 0.3s ease;
+}
+#Reg-Btn:hover{
+    transform: translateY(-2.5px) ;
+}
+#Reg-Btn:active{
+    transform: translateY(0);
+}
+.Rulebook a{
+    text-decoration: none;
+    background-color: #ff8c00;
+    color: #222;
+    border: 2px solid ;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;   
+}
+.Rulebook{
+    color: #222;
+    margin: 15px;
+    display: flexbox;
+    justify-content: center;
+}
+a{
+  text-decoration: none;
+}
