@@ -104,27 +104,45 @@ a{
 .cards-container::-webkit-scrollbar{
     display: none;
 }
-.cards{
-    flex: 0 0 calc(20% - 20px); 
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid #253447;
-    padding: 20px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    min-width: 350px
+.cards {
+  flex: 0 0 300px;             
+  height: 350px;                
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #253447;
+  padding: 20px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  justify-content: space-between;
 }
-.cards img{
-    width: auto;
-    height: 180px;
-    margin-bottom: 10px;
+
+.cards img {
+  width: 100%;
+  max-width: 220px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
-.cards h2{
-    margin-bottom: 8px;
+
+.cards h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
 }
+
+.cards p {
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 6;   /* SAME TEXT HEIGHT FOR ALL */
+  -webkit-box-orient: vertical;
+}
+
 .Organizers{
    text-align: center;
    background: rgba(0, 0, 0, 0.5);
@@ -241,4 +259,238 @@ a{
 
 .brochure a:hover {
   text-decoration: underline;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  /* BODY */
+  body {
+    background-attachment: scroll;
+    font-size: 14px;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    padding: 0 15px;
+    height: 60px;
+  }
+
+  .nav-logo img {
+    height: 32px;
+  }
+
+  .nav-links {
+    display: none; /* hide desktop menu */
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+  }
+
+  .hero img {
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+
+  /* CONTENT WRAPPER */
+  .content {
+    padding: 40px 6%;
+    margin: 40px 3%;
+  }
+
+  /* OVERVIEW SECTION */
+  .image-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .content img {
+    padding-left: 0;
+    height: 150px;
+  }
+
+  /* EVENTS */
+  .cards-container {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .cards {
+    min-width: 280px;
+    padding: 15px;
+  }
+
+  .cards img {
+    height: 150px;
+  }
+
+  /* REGISTER BUTTON */
+  #Reg-Btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 15px;
+  }
+
+  /* ORGANIZERS */
+  .org-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 6% 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .cards {
+    min-width: 250px;
+  }
+
+  .cards img {
+    height: 130px;
+  }
+}
+
+/* NAV LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  background: #0b0f14;
+  border: 1px solid #1c2735;
+  border-radius: 10px;
+  padding: 10px 0;
+  min-width: 180px;
+  display: none;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #1c2735;
+  color: #ff8c00;
+}
+
+/* SHOW ON HOVER */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* MOBILE SIDEBAR */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #0b0f14;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: left 0.3s ease;
+  z-index: 2000;
+}
+
+.mobile-nav a {
+  font-size: 16px;
+  color: wheat;
+}
+
+.mobile-nav a:hover {
+  color: #ff8c00;
+}
+
+.mobile-nav.active {
+  left: 0;
+}
+
+.close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  align-self: flex-end;
+  color: white;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.social-icons img{
+  width: 18px;
 }
