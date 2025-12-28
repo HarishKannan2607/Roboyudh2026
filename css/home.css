@@ -105,8 +105,8 @@ a{
     display: none;
 }
 .cards {
-  flex: 0 0 300px;             
-  height: 350px;                
+  flex: 0 0 300px;
+  min-height: 360px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #253447;
   padding: 20px;
@@ -117,7 +117,8 @@ a{
   align-items: center;
   text-align: center;
 
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .cards img {
@@ -128,10 +129,20 @@ a{
   margin-bottom: 10px;
 }
 
+
 .cards h2 {
   font-size: 18px;
   margin-bottom: 8px;
+  min-height: 44px;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.cards-container a {
+  display: flex;
+}
+
+
 
 .cards p {
   font-size: 14px;
@@ -139,7 +150,7 @@ a{
   overflow: hidden;
 
   display: -webkit-box;
-  -webkit-line-clamp: 6;   /* SAME TEXT HEIGHT FOR ALL */
+  -webkit-line-clamp: 6;   
   -webkit-box-orient: vertical;
 }
 
