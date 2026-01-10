@@ -301,23 +301,23 @@ a{
     background-attachment: scroll;
     font-size: 14px;
   }
-.org-content{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 25px;
-    gap: 23px;
 
-}
-.org-content > div{
-    flex: 1;
-    min-width: 220px;
-}
-.org-content h2{
-    margin-bottom: 13px;
-}
+  .org-content{
+    flex-direction: column;   /* 🔥 stack vertically */
+    gap: 25px;
+  }
+
+  .org-content > div{
+    max-width: 100%;
+    width: 100%;
+  }
+    .org-content > div{
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+  }
+
+
   /* NAVBAR */
   .navbar {
     padding: 0 15px;
@@ -442,10 +442,7 @@ a{
     gap: 23px;
 
 }
-.org-content > div{
-    flex: 1;
-    min-width: 220px;
-}
+
 .org-content h2{
     margin-bottom: 13px;
 }
