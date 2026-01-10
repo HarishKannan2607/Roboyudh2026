@@ -8,8 +8,8 @@ body {
   background-image: url(/pictures/backGround/Normal_Background.png);
   background-size: cover;
   background-position: center;
-  font-family: "Segoe UI", sans-serif;
-  color: #f5deb3;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #e4e4e4;
   line-height: 1.6;
 }
 
