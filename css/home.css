@@ -302,14 +302,16 @@ a{
     font-size: 14px;
   }
 
-  .org-content{
-    flex-direction: column;   /* 🔥 stack vertically */
-    gap: 25px;
+   .org-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 24px;
   }
 
-  .org-content > div{
-    max-width: 100%;
-    width: 100%;
+  .org-content > div {
+    max-width: 100% !important;
+    width: 100% !important;
   }
     .org-content > div{
     padding: 15px;
