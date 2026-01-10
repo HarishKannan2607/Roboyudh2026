@@ -298,12 +298,8 @@ a{
   text-decoration: underline;
 }
 
-/* =========================
-   MOBILE OPTIMIZATION
-   ========================= */
-@media (max-width: 768px) {
 
-  /* BODY */
+@media (max-width: 768px) {
   body {
     background-attachment: scroll;
     font-size: 14px;
@@ -318,6 +314,12 @@ a{
     gap: 24px;
   }
 
+  .Brochure{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
   .org-content > div {
     max-width: 100% !important;
     width: 100% !important;
@@ -340,10 +342,10 @@ a{
   }
 
   .nav-links {
-    display: none; /* hide desktop menu */
+    display: none; 
   }
 
-  /* HERO */
+
   .hero {
     height: auto;
   }
@@ -354,13 +356,11 @@ a{
     object-fit: cover;
   }
 
-  /* CONTENT WRAPPER */
   .content {
     padding: 40px 6%;
     margin: 40px 3%;
   }
 
-  /* OVERVIEW SECTION */
   .image-flex {
     flex-direction: column;
     align-items: center;
@@ -373,7 +373,7 @@ a{
     height: 150px;
   }
 
-  /* EVENTS */
+
   .cards-container {
     gap: 15px;
     padding: 10px;
@@ -388,20 +388,20 @@ a{
     height: 150px;
   }
 
-  /* REGISTER BUTTON */
+
   #Reg-Btn {
     width: 100%;
     max-width: 280px;
     font-size: 15px;
   }
 
-  /* ORGANIZERS */
+
   .org-content {
     flex-direction: column;
     gap: 30px;
   }
 
-  /* FOOTER */
+
   .footer {
     padding: 40px 6% 20px;
   }
