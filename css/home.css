@@ -31,7 +31,12 @@ body{
 .nav-logo img {
   height: 40px;
 }
-
+  .Brochure{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
 .nav-links {
   list-style: none;
   display: flex;

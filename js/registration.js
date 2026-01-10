@@ -25,9 +25,11 @@ function submitRequest(e) {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      teamSize: data.teamSize
-    })
+   body: JSON.stringify({
+  teamSize: Number(data.teamSize),
+  event: data.event
+})
+
   })
     .then(res => {
       if (!res.ok) throw new Error("Order creation failed");
