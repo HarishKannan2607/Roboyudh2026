@@ -164,20 +164,27 @@ a{
   margin-top: 25px;
   width: 100%;
 }
+/* =========================
+   ORGANIZERS – DESKTOP VIEW
+   ========================= */
+   .org-content {
+    text-align: center;
 
-.org-content{
-  display: flex;
-  flex-wrap: nowrap;         
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  width: 100%;
-}
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 24px;
+  }
 
-.org-content > div{
-  flex: 1;                    
-  max-width: 25%;            
-}
+  .org-content > div {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+    .org-content > div{
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+  }
 
 .org-content h2{
   margin-bottom: 12px;
@@ -301,7 +308,9 @@ a{
     background-attachment: scroll;
     font-size: 14px;
   }
-
+  .image-flex p{
+    text-align: justify;
+  }
    .org-content {
     display: flex !important;
     flex-direction: column !important;
@@ -434,20 +443,7 @@ a{
   .cards img {
     height: 130px;
   }
-  .org-content{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 25px;
-    gap: 23px;
 
-}
-
-.org-content h2{
-    margin-bottom: 13px;
-}
 }
 
 /* NAV LEFT */
